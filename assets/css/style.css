@@ -257,3 +257,14 @@ p {
         width: 45%;
     }
 }
+
+/* 5. Estilos para el Mapa Incrustado */
+.map-container {
+    overflow: hidden;
+    border-radius: 8px;
+    /* Estética alineada con los botones */
+    margin-top: 20px;
+    width: 100%;
+    line-height: 0;
+    /* Corrección para espacios en blanco del iframe */
+}
