@@ -268,3 +268,27 @@ p {
     line-height: 0;
     /* Corrección para espacios en blanco del iframe */
 }
+
+/* 5. CTA Secundario (Social) */
+.cta-secondary {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--color-primario);
+    /* Color Terracota */
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--fuente-titulos);
+    border-radius: 8px;
+    margin-top: 25px;
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.cta-secondary:hover {
+    transform: scale(1.03);
+    background-color: #c96a53;
+    /* Un terracota más oscuro al pasar el mouse */
+}
+
+.cta-secondary i {
+    margin-right: 10px;
+}
