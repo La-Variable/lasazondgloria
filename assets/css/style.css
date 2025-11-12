@@ -1,294 +1,79 @@
 /*
---- Hoja de Estilos de La Sazón de Gloria ---
---- Fundamentado en el Brand Kit Estratégico ---
+--- Hoja de Estilos Personalizada de La Sazón de Gloria ---
+--- Pilar: Activo Tecnológico (PWA) ---
+--- Fundamento: LSDG-MAR-001_Manual_Marca_v1.0 (Canva) ---
 */
 
-/* 1. Definición de Variables de Marca (Brand Kit) */
-:root {
-    --color-primario: #E27D60;
-    /* Terracota */
-    --color-secundario: #859C63;
-    /* Verde Oliva */
-    --color-acento: #E9AB1C;
-    /* Amarillo Mostaza */
-    --color-base: #F7F3E8;
-    /* Blanco Hueso / Crema */
-    --color-texto: #3E2723;
-    /* Marrón Café Oscuro */
-    --color-whatsapp: #25D366;
-
-    --fuente-titulos: 'Arvo', serif;
-    --fuente-cuerpo: 'Lato', sans-serif;
-}
-
-/* 2. Reseteo y Estilos Globales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos base (Fundamento: Arvo/Lato) */
 body {
-    font-family: var(--fuente-cuerpo);
-    background-color: var(--color-base);
-    color: var(--color-texto);
-    line-height: 1.6;
+    font-family: 'Lato', sans-serif;
+    /* Fuente 'sans' por defecto */
+    background-color: theme('colors.brand-light');
+    color: theme('colors.brand-dark');
 }
 
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 20px;
+.font-serif {
+    font-family: 'Arvo', serif;
+    /* Fuente 'serif' para títulos */
 }
 
-h1,
-h2,
-h3,
-h4 {
-    font-family: var(--fuente-titulos);
-    color: var(--color-texto);
-    margin-bottom: 15px;
+/* Estilo para el header pegajoso */
+.header-sticky {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(247, 243, 232, 0.85);
+    /* Fondo Crema (brand-light) con transparencia */
 }
 
-p {
-    margin-bottom: 15px;
-}
-
-/* 3. Estilos de Módulos */
-
-/* Header */
-.header {
-    background-color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 3px solid var(--color-primario);
-}
-
-.header .logo {
-    max-width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.header h1 {
-    font-size: 2rem;
-    color: var(--color-primario);
-    margin: 0;
-}
-
-/* Hero Section */
-.hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.hero h2 {
-    font-size: 2.2rem;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-/* CTA Buttons */
-.cta-section {
-    padding: 30px 0;
-    background-color: #fff;
-}
-
-.cta-section .container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 18px 25px;
-    text-decoration: none;
-    color: #fff;
-    font-family: var(--fuente-titulos);
-    font-size: 1.2rem;
-    border-radius: 8px;
-    text-align: center;
-    transition: transform 0.2s ease;
-}
-
-.cta-button i {
-    margin-right: 12px;
-}
-
-.cta-button:hover {
-    transform: scale(1.03);
-}
-
-.cta-whatsapp {
-    background-color: var(--color-whatsapp);
-}
-
-.cta-map {
-    background-color: var(--color-acento);
-    color: var(--color-texto);
-}
-
-/* PVU Section */
-.pvu-section {
-    padding: 40px 0;
-    text-align: center;
-}
-
-.menu-highlight {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    font-family: var(--fuente-titulos);
-    font-size: 1.1rem;
-    color: var(--color-secundario);
-}
-
-.menu-highlight span {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-/* Info Section */
-.info-section {
-    background-color: var(--color-texto);
-    color: var(--color-base);
-    padding: 40px 0;
-}
-
-.info-section .container {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-.info-box {
-    text-align: center;
-}
-
-.info-box h4 {
-    color: var(--color-acento);
-    font-size: 1.3rem;
-}
-
-.info-box h4 i {
-    margin-right: 8px;
-}
-
-.info-box p {
-    margin-bottom: 5px;
-    font-size: 1.1rem;
-}
-
-/* Footer */
-.footer {
-    background-color: #f4f4f4;
-    color: #777;
-    text-align: center;
-    padding: 30px 20px;
-    border-top: 1px solid #ddd;
-}
-
-.social-links {
-    margin-bottom: 20px;
-}
-
-.social-links a {
-    font-size: 2rem;
-    color: var(--color-texto);
-    margin: 0 15px;
-    transition: color 0.2s;
-}
-
-.social-links a:hover {
-    color: var(--color-primario);
-}
-
-.footer p {
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-}
-
-.footer-email a {
-    color: var(--color-secundario);
-    text-decoration: none;
-}
-
-.footer-email a:hover {
-    text-decoration: underline;
-}
-
-/* 4. Responsive (Diseño Adaptativo) */
-
-/* Para tablets y escritorios pequeños */
-@media (min-width: 768px) {
-    .header .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .header h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero h2 {
-        font-size: 3rem;
-    }
-
-    .cta-section .container {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .info-section .container {
-        flex-direction: row;
-        justify-content: space-around;
-    }
-
-    .info-box {
-        width: 45%;
-    }
-}
-
-/* 5. Estilos para el Mapa Incrustado */
-.map-container {
-    overflow: hidden;
-    border-radius: 8px;
-    /* Estética alineada con los botones */
-    margin-top: 20px;
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
     width: 100%;
-    line-height: 0;
-    /* Corrección para espacios en blanco del iframe */
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
 }
 
-/* 5. CTA Secundario (Social) */
-.cta-secondary {
-    display: inline-block;
-    padding: 12px 20px;
-    background-color: var(--color-primario);
-    /* Color Terracota */
-    color: #fff;
-    text-decoration: none;
-    font-family: var(--fuente-titulos);
-    border-radius: 8px;
-    margin-top: 25px;
-    transition: transform 0.2s ease, background-color 0.2s;
+.modal-content {
+    position: relative;
+    margin: 10% auto;
+    width: 90%;
+    max-width: 500px;
 }
 
-.cta-secondary:hover {
-    transform: scale(1.03);
-    background-color: #c96a53;
-    /* Un terracota más oscuro al pasar el mouse */
+.modal-open {
+    overflow: hidden;
 }
 
-.cta-secondary i {
-    margin-right: 10px;
+/* Estilo para el botón flotante del carrito */
+.cart-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 90;
+}
+
+/* Animación de entrada */
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
