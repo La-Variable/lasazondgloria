@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>La Sazón de Gloria - Sabor Casero</title>
-    <meta name="description" content="La Sazón de Gloria S.A.S. BIC. Pide comida casera tradicional en Medellín, apoyando el empleo local. Pedidos directos, sin comisiones.">
+    <title>La Sazón de Gloria - Sabor Casero (Próximamente)</title>
+    <meta name="description" content="La Sazón de Gloria S.A.S. BIC. Comida casera tradicional en Medellín. Plataforma de pedidos directos en desarrollo.">
     
     <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="apple-touch-icon" href="assets/images/logo.png">
-    <link rel="manifest" href="manifest.json" crossOrigin="use-credentials">
-    <meta name="theme-color" content="#3E2723">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
@@ -44,380 +42,91 @@
 
 </head>
 
-<body class="antialiased font-sans">
-    <div id="app-container" class="max-w-7xl mx-auto">
+<body class="antialiased font-sans flex flex-col min-h-screen">
+    <div id="app-container" class="max-w-7xl mx-auto flex-grow">
 
         <header class="header-sticky border-b border-gray-200">
             <nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
                 <div class="flex items-center space-x-2">
                     <img src="assets/images/logo_v1.0-LSDG.png" alt="Logo La Sazón de Gloria" class="h-10 w-auto">
-                    <a href="#" onclick="app.navigateTo('home')" class="text-2xl font-bold text-brand-dark tracking-tight font-serif">
+                    <span class="text-2xl font-bold text-brand-dark tracking-tight font-serif">
                         La Sazón de Gloria
-                    </a>
+                    </span>
                 </div>
                 
                 <div class="hidden md:flex items-center space-x-6">
-                    <a href="#" onclick="app.navigateTo('home')" class="text-brand-gray hover:text-brand-primary font-medium">Menú</a>
-                    <a href="#" onclick="app.navigateTo('profile')" class="text-brand-gray hover:text-brand-primary font-medium">Mis Pedidos</a>
-                    <a href="#" id="desktop-login-btn" onclick="app.showLoginModal()" class="text-brand-gray hover:text-brand-primary font-medium">Ingresar</a>
-                    <a href="#" id="desktop-logout-btn" onclick="app.auth.logout()" class="text-brand-gray hover:text-brand-primary font-medium hidden">Salir</a>
-                </div>
-                
-                <div class="hidden md:block">
-                    <button onclick="app.navigateTo('cart')" class="relative bg-brand-primary text-white px-4 py-2 rounded-lg font-medium hover:opacity-80 transition duration-300 flex items-center space-x-2">
-                        <ion-icon name="cart-outline" class="text-xl"></ion-icon>
-                        <span>Carrito</span>
-                        <span id="cart-count-desktop" class="absolute -top-2 -right-2 bg-brand-secondary text-brand-dark text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">0</span>
-                    </button>
-                </div>
-
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-brand-dark text-3xl">
-                        <ion-icon name="menu-outline"></ion-icon>
-                    </button>
+                    <span class="text-brand-gray font-medium">Menú (Próximamente)</span>
                 </div>
             </nav>
-            
-            <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-4 space-y-3 border-t border-gray-200">
-                <a href="#" onclick="app.navigateTo('home')" class="block text-brand-gray hover:text-brand-primary font-medium py-2">Menú</a>
-                <a href="#" onclick="app.navigateTo('profile')" class="block text-brand-gray hover:text-brand-primary font-medium py-2">Mis Pedidos</a>
-                <a href="#" id="mobile-login-btn" onclick="app.showLoginModal()" class="block text-brand-gray hover:text-brand-primary font-medium py-2">Ingresar</a>
-                <a href="#" id="mobile-logout-btn" onclick="app.auth.logout()" class="block text-brand-gray hover:text-brand-primary font-medium py-2 hidden">Salir</a>
-            </div>
         </header>
 
         <main id="main-content" class="px-4 sm:px-6 lg:px-8 py-8 md:py-12">
 
             <div id="page-home" class="page fade-in">
-                <div class="bg-brand-primary rounded-xl p-8 md:p-12 text-white shadow-lg mb-12" style="background-image: url('assets/images/hero-bg.jpg'); background-size: cover; background-position: center;">
-                    <h1 class="text-3xl md:text-5xl font-bold mb-4 font-serif">Sazón Tradicional, Directo a tu Mesa.</h1>
-                    <p class="text-lg md:text-xl text-white mb-6">Pide directo a nuestra cocina, sin comisiones de apps. Apoyas el empleo local (S.A.S. BIC) y disfrutas del mejor sabor.</p>
-                    <a href="#menu-section" class="bg-white text-brand-primary font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition duration-300">Ver el Menú de Hoy</a>
+                <div class="rounded-xl p-8 md:p-12 text-white shadow-lg mb-12 relative overflow-hidden" style="min-height: 400px;">
+                    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('assets/images/hero-bg.jpg'); filter: brightness(0.7);"></div>
+                    <div class="relative z-10 flex flex-col justify-center h-full">
+                        <h1 class="text-3xl md:text-5xl font-bold mb-4 font-serif">Sazón Tradicional, Próximamente a tu Mesa.</h1>
+                        <p class="text-lg md:text-xl text-white mb-6">Estamos cocinando nuestra nueva plataforma de pedidos directos. Apoya el empleo local (S.A.S. BIC) y prepárate para el mejor sabor, sin comisiones de apps.</p>
+                        <span class="bg-brand-secondary text-brand-dark font-bold px-6 py-3 rounded-lg inline-block w-auto">
+                            Lanzamiento Próximamente
+                        </span>
+                    </div>
                 </div>
                 
-                <section id="menu-section">
-                    <h2 class="text-3xl font-bold text-brand-dark mb-8 font-serif">Nuestro Menú</h2>
-                    
-                    <div id="menu-container" class="space-y-12">
-                        
-                        <div id="category-template" class="hidden">
-                            <h3 class="text-2xl font-semibold text-brand-dark mb-6 capitalize font-serif">[Nombre Categoría]</h3>
-                            <div class="product-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                
-                                <div id="product-template" class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-2xl">
-                                    <img class="h-48 w-full object-cover" src="https://placehold.co/600x400/EA906C/white?text=Cargando..." alt="Foto del plato">
-                                    <div class="p-6">
-                                        <h4 class="text-xl font-bold text-brand-dark mb-2 font-serif">[Nombre Plato]</h4>
-                                        <p class="text-brand-gray mb-4 min-h-[4.5rem]">[Descripción del plato...]</p>
-                                        <div class="flex justify-between items-center">
-                                            <span class="text-2xl font-bold text-brand-primary font-serif">$[Precio]</span>
-                                            <button class="add-to-cart-btn bg-brand-secondary text-brand-dark px-4 py-2 rounded-lg font-medium hover:opacity-80 transition duration-300">
-                                                Agregar
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        
-                        <div id="loading-spinner" class="text-center py-12">
-                            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-primary mx-auto"></div>
-                            <p class="mt-4 text-brand-gray">Cargando la sazón...</p>
-                        </div>
-
-                    </div>
+                <section id="about-section" class="text-center max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold text-brand-dark mb-4 font-serif">Nuestra Cocina Está en Marcha</h2>
+                    <p class="text-xl text-brand-gray mb-8">
+                        La Sazón de Gloria S.A.S. BIC está finalizando el desarrollo de su plataforma tecnológica para llevar el auténtico sabor casero de Medellín a tu hogar. 
+                        Pronto podrás hacer tus pedidos aquí.
+                    </p>
+                    <p class="text-lg text-brand-dark">
+                        Mientras tanto, puedes contactarnos en nuestras redes sociales.
+                    </p>
                 </section>
             </div>
-
-            <div id="page-cart" class="page hidden fade-in">
-                <h1 class="text-3xl font-bold text-brand-dark mb-8 font-serif">Tu Pedido</h1>
-                
-                <div id="cart-items-container" class="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <div class="hidden md:grid grid-cols-6 gap-4 p-4 border-b font-semibold text-brand-gray">
-                        <div class="col-span-3">Producto</div>
-                        <div class="text-center">Precio</div>
-                        <div class="text-center">Cantidad</div>
-                        <div class="text-right">Total</div>
-                    </div>
-                    
-                    <div id="cart-items-list">
-                        <div id="cart-item-template" class="grid grid-cols-6 gap-4 p-4 border-b items-center hidden">
-                            <div class="col-span-6 md:col-span-3 flex items-center space-x-4">
-                                <img src="https://placehold.co/100x100/EA906C/white?text=Plato" class="w-16 h-16 rounded-lg object-cover">
-                                <div>
-                                    <h4 class="font-bold text-brand-dark font-serif">[Nombre Plato]</h4>
-                                    <button class="text-red-500 text-sm hover:underline remove-item-btn">Quitar</button>
-                                </div>
-                            </div>
-                            <div class="hidden md:flex items-center justify-center text-brand-gray">
-                                <span>$[Precio]</span>
-                            </div>
-                            <div class="col-span-3 md:col-span-1 flex items-center justify-center">
-                                <input type="number" value="1" min="1" class="quantity-input w-16 text-center border rounded-lg p-1 focus:ring-brand-primary focus:border-brand-primary">
-                            </div>
-                            <div class="col-span-3 md:col-span-1 text-right font-bold text-brand-dark text-lg font-serif">
-                                <span>$[Total Item]</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="cart-empty-message" class="p-8 text-center hidden">
-                        <ion-icon name="cart-outline" class="text-6xl text-gray-300"></ion-icon>
-                        <p class="mt-4 text-xl text-brand-gray">Tu carrito está vacío.</p>
-                        <button onclick="app.navigateTo('home')" class="mt-6 bg-brand-primary text-white px-6 py-3 rounded-lg font-medium hover:opacity-80 transition duration-300">
-                            Ver el Menú
-                        </button>
-                    </div>
-                </div>
-
-                <div id="cart-summary" class="md:flex justify-end mt-8 hidden">
-                    <div class="w-full md:w-1/2 lg:w-1/3 bg-white rounded-xl shadow-lg p-6">
-                        <h2 class="text-2xl font-bold mb-6 font-serif">Resumen del Pedido</h2>
-                        <div class="space-y-4">
-                            <div class="flex justify-between text-lg">
-                                <span class="text-brand-gray">Subtotal:</span>
-                                <span id="summary-subtotal" class="font-medium text-brand-dark font-serif">$0</span>
-                            </div>
-                            <div class="flex justify-between text-lg">
-                                <span class="text-brand-gray">Domicilio:</span>
-                                <span id="summary-delivery" class="font-medium text-brand-dark font-serif">$4,000</span>
-                            </div>
-                            <div class="flex justify-between text-2xl font-bold border-t pt-4 mt-4">
-                                <span class="text-brand-dark font-serif">Total:</span>
-                                <span id="summary-total" class="text-brand-primary font-serif">$4,000</span>
-                            </div>
-                        </div>
-                        <button onclick="app.navigateTo('checkout')" class="mt-8 w-full bg-brand-primary text-white text-lg px-6 py-4 rounded-lg font-bold hover:opacity-80 transition duration-300">
-                            Continuar al Pago
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div id="page-checkout" class="page hidden fade-in">
-                <h1 class="text-3xl font-bold text-brand-dark mb-8 font-serif">Completa tu Pedido</h1>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
-                    <form id="checkout-form" class="md:col-span-2 bg-white rounded-xl shadow-lg p-8 space-y-6">
-                        <div>
-                            <label for="checkout-name" class="block text-sm font-medium text-brand-gray">Nombre Completo</label>
-                            <input type="text" id="checkout-name" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50">
-                        </div>
-                        <div>
-                            <label for="checkout-phone" class="block text-sm font-medium text-brand-gray">Teléfono (WhatsApp)</label>
-                            <input type="tel" id="checkout-phone" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50">
-                        </div>
-                        <div>
-                            <label for="checkout-address" class="block text-sm font-medium text-brand-gray">Dirección de Entrega</label>
-                            <input type="text" id="checkout-address" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50">
-                        </div>
-                        <div>
-                            <label for="checkout-notes" class="block text-sm font-medium text-brand-gray">Notas Adicionales (Ej. apto, sin timbre)</label>
-                            <textarea id="checkout-notes" rows="3" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50"></textarea>
-                        </div>
-
-                        <div class="relative flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="privacy-policy-checkbox" name="privacy-policy" type="checkbox" required class="focus:ring-brand-primary h-4 w-4 text-brand-primary border-gray-300 rounded">
-                            </div>
-                            <div class="ml-3 text-sm">
-                                <label for="privacy-policy-checkbox" class="font-medium text-brand-gray">Acepto la <a href="politica-privacidad.html" target="_blank" class="text-brand-primary hover:underline">Política de Tratamiento de Datos</a></label>
-                            </div>
-                        </div>
-                        <div class="relative flex items-start">
-                            <div class="flex items-center h-5">
-                                <input id="terms-conditions-checkbox" name="terms-conditions" type="checkbox" required class="focus:ring-brand-primary h-4 w-4 text-brand-primary border-gray-300 rounded">
-                            </div>
-                            <div class="ml-3 text-sm">
-                                <label for="terms-conditions-checkbox" class="font-medium text-brand-gray">He leído y acepto los <a href="terminos-condiciones.html" target="_blank" class="text-brand-primary hover:underline">Términos y Condiciones</a> del servicio.</label>
-                            </div>
-                        </div>
-                    </form>
-
-                    <div class="md:col-span-1">
-                        <div class="bg-white rounded-xl shadow-lg p-6 sticky top-28">
-                            <h2 class="text-2xl font-bold mb-6 font-serif">Tu Resumen</h2>
-                            <div id="checkout-summary-items" class="space-y-3 mb-6 max-h-48 overflow-y-auto">
-                                </div>
-                            <div class="space-y-4">
-                                <div class="flex justify-between text-lg">
-                                    <span class="text-brand-gray">Subtotal:</span>
-                                    <span id="checkout-subtotal" class="font-medium text-brand-dark font-serif">$0</span>
-                                </div>
-                                <div class="flex justify-between text-lg">
-                                    <span class="text-brand-gray">Domicilio:</span>
-                                    <span id="checkout-delivery" class="font-medium text-brand-dark font-serif">$4,000</span>
-                                </div>
-                                <div class="flex justify-between text-2xl font-bold border-t pt-4 mt-4">
-                                    <span class="text-brand-dark font-serif">Total:</span>
-                                    <span id="checkout-total" class="text-brand-primary font-serif">$4,000</span>
-                                </div>
-                            </div>
-                            <button type="submit" form="checkout-form" class="mt-8 w-full bg-brand-primary text-white text-lg px-6 py-4 rounded-lg font-bold hover:opacity-80 transition duration-300 flex items-center justify-center space-x-2">
-                                <ion-icon name="shield-checkmark-outline" class="text-2xl"></ion-icon>
-                                <span>Pagar (Wompi/PayU)</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="page-profile" class="page hidden fade-in">
-                <h1 class="text-3xl font-bold text-brand-dark mb-8 font-serif">Mis Pedidos</h1>
-                
-                <div id="profile-loading" class="text-center py-12 hidden">
-                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-primary mx-auto"></div>
-                    <p class="mt-4 text-brand-gray">Cargando tu historial...</p>
-                </div>
-
-                <div id="profile-not-logged-in" class="bg-white rounded-xl shadow-lg p-8 text-center">
-                    <ion-icon name="log-in-outline" class="text-6xl text-gray-300"></ion-icon>
-                    <p class="mt-4 text-xl text-brand-gray">Debes ingresar para ver tus pedidos.</p>
-                    <button onclick="app.showLoginModal()" class="mt-6 bg-brand-primary text-white px-6 py-3 rounded-lg font-medium hover:opacity-80 transition duration-300">
-                        Ingresar o Registrarse
-                    </button>
-                </div>
-
-                <div id="profile-logged-in" class="hidden">
-                    <div id="profile-user-info" class="mb-8 p-6 bg-white rounded-xl shadow-lg">
-                        <h2 class="text-2xl font-serif font-bold text-brand-dark">Hola, <span id="user-name-placeholder">[Nombre]</span></h2>
-                        <p class="text-brand-gray" id="user-email-placeholder">[Email]</p>
-                        <button onclick="app.auth.logout()" class="mt-4 text-sm text-red-600 hover:underline">Cerrar Sesión</button>
-                    </div>
-                    
-                    <div id="profile-orders-list" class="space-y-6">
-                        <div id="order-history-template" class="bg-white rounded-xl shadow-lg p-6 hidden">
-                            <div class="flex justify-between items-start mb-4">
-                                <div>
-                                    <h3 class="text-lg font-bold text-brand-dark font-serif">Pedido #[ID Pedido]</h3>
-                                    <p class="text-sm text-brand-gray">[Fecha Pedido]</p>
-                                </div>
-                                <span class="status-badge text-sm font-medium px-3 py-1 rounded-full">[Estado]</span>
-                            </div>
-                            <div class="border-t border-b py-4 my-4 space-y-2" id="order-items-container">
-                                </div>
-                            <div class="flex justify-between items-center font-bold text-xl">
-                                <span class="font-serif">Total Pagado:</span>
-                                <span class="text-brand-primary font-serif">$[Total Pedido]</span>
-                            </div>
-                        </div>
-                        
-                        <div id="profile-no-orders" class="text-center p-8 hidden">
-                            <ion-icon name="receipt-outline" class="text-6xl text-gray-300"></ion-icon>
-                            <p class="mt-4 text-xl text-brand-gray">Aún no has hecho ningún pedido.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div id="page-order-success" class="page hidden fade-in text-center max-w-lg mx-auto bg-white rounded-xl shadow-lg p-12">
-                <ion-icon name="checkmark-circle-outline" class="text-8xl text-brand-primary"></ion-icon>
-                <h1 class="text-3xl font-bold text-brand-dark mt-6 mb-4 font-serif">¡Pedido Recibido!</h1>
-                <p class="text-lg text-brand-gray mb-8">¡Gracias por tu compra, Gloria ya está preparando tu pedido! Te notificaremos cuando esté en camino.</p>
-                <button onclick="app.navigateTo('profile')" class="bg-brand-primary text-white px-6 py-3 rounded-lg font-medium hover:opacity-80 transition duration-300">
-                    Ver mis Pedidos
-                </button>
-            </div>
-
         </main>
-
-        <footer class="border-t border-gray-200 mt-16">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-                    <div>
-                        <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
-                            <img src="assets/images/logo_v1.0-LSDG.png" alt="Logo La Sazón de Gloria" class="h-8 w-8">
-                            <span class="text-2xl font-bold text-brand-dark font-serif">La Sazón de Gloria</span>
-                        </div>
-                        <p class="text-brand-gray mb-4">S.A.S. BIC. Apoyando el empleo local en Medellín.</p>
-                        <div class="flex justify-center md:justify-start space-x-4 text-2xl text-brand-gray">
-                            <a href="https://www.facebook.com/LaSazonDGloria/" target="_blank" rel="noopener" class="hover:text-brand-primary"><ion-icon name="logo-facebook"></ion-icon></a>
-                            <a href="https://www.instagram.com/LaSazonDGloria/" target="_blank" rel="noopener" class="hover:text-brand-primary"><ion-icon name="logo-instagram"></ion-icon></a>
-                            <a href="https://wa.me/573247678382" target="_blank" rel="noopener" class="hover:text-brand-primary"><ion-icon name="logo-whatsapp"></ion-icon></a>
-                        </div>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-brand-dark text-lg mb-4 font-serif">Navegación</h4>
-                        <ul class="space-y-2">
-                            <li><a href="#" onclick="app.navigateTo('home')" class="text-brand-gray hover:text-brand-primary">Menú</a></li>
-                            <li><a href="#" onclick="app.navigateTo('profile')" class="text-brand-gray hover:text-brand-primary">Mis Pedidos</a></li>
-                            <li><a href="#" onclick="app.showLoginModal()" class="text-brand-gray hover:text-brand-primary">Ingresar</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-brand-dark text-lg mb-4 font-serif">Legal</h4>
-                        <ul class="space-y-2">
-                            <li><span class="text-brand-gray">LA SAZÓN DE GLORIA S.A.S. BIC</span></li>
-                            <li><span class="text-brand-gray">NIT: [Pendiente por RUT]</span></li>
-                            <li><span class="text-brand-gray">Medellín, Antioquia</span></li>
-                            <li><a href="politica-privacidad.html" target="_blank" class="text-brand-gray hover:text-brand-primary">Política de Privacidad</a></li>
-                            <li><a href="terminos-condiciones.html" target="_blank" class="text-brand-gray hover:text-brand-primary">Términos y Condiciones</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="border-t border-gray-200 mt-12 pt-8 text-center text-brand-gray">
-                    <p>© 2025 La Sazón de Gloria S.A.S. BIC. Todos los derechos reservados.</p>
-                    <p class="text-sm mt-2">Plataforma incubada y desarrollada por <a href="https://la-variable.github.io/" target="_blank" rel="noopener" class="font-medium hover:text-brand-primary">La Variable</a>.</p>
-                </div>
-            </div>
-        </footer>
-
-    </div> 
-    
-    <div class="md:hidden cart-fab">
-        <button onclick="app.navigateTo('cart')" class="relative bg-brand-primary text-white w-16 h-16 rounded-full shadow-xl flex items-center justify-center">
-            <ion-icon name="cart-outline" class="text-3xl"></ion-icon>
-            <span id="cart-count-mobile" class="absolute -top-1 -right-1 bg-brand-secondary text-brand-dark text-sm font-bold rounded-full h-6 w-6 flex items-center justify-center">0</span>
-        </button>
     </div>
 
-    <div id="login-modal" class="modal">
-        <div class="modal-content bg-white rounded-xl shadow-2xl overflow-hidden fade-in">
-            <div class="flex border-b">
-                <button id="login-tab-btn" class="w-1/2 py-4 font-medium text-center text-brand-primary border-b-2 border-brand-primary font-serif">Ingresar</button>
-                <button id="register-tab-btn" class="w-1/2 py-4 font-medium text-center text-brand-gray hover:text-brand-dark font-serif">Registrarse</button>
+    <footer class="border-t border-gray-200 mt-16 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <div class="flex items-center justify-center md:justify-start space-x-2 mb-4">
+                        <img src="assets/images/logo_v1.0-LSDG.png" alt="Logo La Sazón de Gloria" class="h-8 w-8">
+                        <span class="text-2xl font-bold text-brand-dark font-serif">La Sazón de Gloria</span>
+                    </div>
+                    <p class="text-brand-gray mb-4">S.A.S. BIC. Apoyando el empleo local en Medellín.</p>
+                    <div class="flex justify-center md:justify-start space-x-4 text-2xl text-brand-gray">
+                        <a href="https://www.facebook.com/LaSazonDGloria/" target="_blank" rel="noopener" class="hover:text-brand-primary"><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="https://www.instagram.com/LaSazonDGloria/" target="_blank" rel="noopener" class="hover:text-brand-primary"><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="https://wa.me/573247678382" target="_blank" rel="noopener" class="hover:text-brand-primary"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-dark text-lg mb-4 font-serif">Navegación</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-brand-gray">Menú (Próximamente)</span></li>
+                        <li><span class="text-brand-gray">Pedidos (Próximamente)</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-brand-dark text-lg mb-4 font-serif">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><span class="text-brand-gray">LA SAZÓN DE GLORIA S.A.S. BIC</span></li>
+                        <li><span class="text-brand-gray">NIT: [Pendiente por RUT]</span></li>
+                        <li><span class="text-brand-gray">Medellín, Antioquia</span></li>
+                        <li><a href="politica-privacidad.html" target="_blank" class="text-brand-gray hover:text-brand-primary">Política de Privacidad</a></li>
+                        <li><a href="terminos-condiciones.html" target="_blank" class="text-brand-primary hover:underline">Términos y Condiciones</a></li>
+                    </ul>
+                </div>
             </div>
-
-            <button onclick="app.hideLoginModal()" class="absolute top-4 right-5 text-2xl text-brand-gray hover:text-brand-dark">×</button>
-            
-            <form id="login-form" class="p-8 space-y-6">
-                <h2 class="text-2xl font-bold text-brand-dark text-center font-serif">Bienvenido de Nuevo</h2>
-                <div>
-                    <label for="login-email" class="block text-sm font-medium text-brand-gray">Email</label>
-                    <input type="email" id="login-email" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50">
-                </div>
-                <div>
-                    <label for="login-password" class="block text-sm font-medium text-brand-gray">Contraseña</label>
-                    <input type="password" id="login-password" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50">
-                </div>
-                <button type="submit" class="w-full bg-brand-primary text-white text-lg px-6 py-3 rounded-lg font-bold hover:opacity-80 transition duration-300">
-                    Ingresar
-                </button>
-            </form>
-
-            <form id="register-form" class="p-8 space-y-6 hidden">
-                <h2 class="text-2xl font-bold text-brand-dark text-center font-serif">Crea tu Cuenta</h2>
-                <div>
-                    <label for="register-name" class="block text-sm font-medium text-brand-gray">Nombre Completo</label>
-                    <input type="text" id="register-name" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50">
-                </div>
-                <div>
-                    <label for="register-email" class="block text-sm font-medium text-brand-gray">Email</label>
-                    <input type="email" id="register-email" required class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50">
-                </div>
-                <div>
-                    <label for="register-password" class="block text-sm font-medium text-brand-gray">Contraseña</label>
-                    <input type="password" id="register-password" required minlength="6" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-brand-primary focus:ring focus:ring-brand-primary focus:ring-opacity-50">
-                </div>
-                <button type="submit" class="w-full bg-brand-primary text-white text-lg px-6 py-3 rounded-lg font-bold hover:opacity-80 transition duration-300">
-                    Crear Cuenta
-                </button>
-            </form>
+            <div class="border-t border-gray-200 mt-12 pt-8 text-center text-brand-gray">
+                <p>© 2025 La Sazón de Gloria S.A.S. BIC. Todos los derechos reservados.</p>
+                <p class="text-sm mt-2">Plataforma incubada y desarrollada por <a href="https://la-variable.github.io/" target="_blank" rel="noopener" class="font-medium hover:text-brand-primary">La Variable</a>.</p>
+            </div>
         </div>
-    </div>
-    
-    <script src="assets/js/app.js" type="module" defer></script>
+    </footer>
     
 </body>
 </html>
