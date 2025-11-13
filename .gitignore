@@ -1,0 +1,9 @@
+# Dependencias locales (innecesarias para producción en CDN)
+/node_modules
+
+# Archivos de Sistema Operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de configuración local (si existieran)
+.env
